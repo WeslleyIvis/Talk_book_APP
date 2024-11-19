@@ -4,6 +4,7 @@ import android.content.Context
 import android.database.Cursor
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
+import android.util.Log
 import androidx.core.content.contentValuesOf
 import com.example.starteraplication.model.User
 
@@ -14,7 +15,7 @@ class UserDbHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_NAME, 
     }
 
         override fun onCreate(db: SQLiteDatabase) {
-            val SQL_CREATE_ENTRIES =
+            val sqlCreateEntries =
                 "CREATE TABLE ${UserContract.UserEntry.TABLE_NAME} (" +
                         "${UserContract.UserEntry.COLUMN_ID} INTEGER PRIMARY KEY AUTOINCREMENT," +
                         "${UserContract.UserEntry.COLUMN_NAME} TEXT," +
@@ -22,7 +23,7 @@ class UserDbHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_NAME, 
                         "${UserContract.UserEntry.COLUMN_EMAIL} TEXT," +
                         "${UserContract.UserEntry.COLUMN_PASSWORD} TEXT)"
 
-            db.execSQL(SQL_CREATE_ENTRIES)
+            db.execSQL(sqlCreateEntries)
         }
 
         override fun onUpgrade(db: SQLiteDatabase, ondVersion: Int, newVersion: Int) {
@@ -45,10 +46,12 @@ class UserDbHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_NAME, 
                 put(UserContract.UserEntry.COLUMN_PASSWORD, user.password)
             }
 
-            return db.insert(UserContract.UserEntry.TABLE_NAME, null, values)
+            val newRowId = db.insert(UserContract.UserEntry.TABLE_NAME, null, values)
+            db.close()
+            return newRowId
         }
 
-        fun readAllUsers(): List<User> {
+        fun readAllUsers(): String {
             val users = mutableListOf<User>()
             val db = readableDatabase
             val cursor: Cursor = db.query(
@@ -56,13 +59,16 @@ class UserDbHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_NAME, 
                 null, null, null, null, null, null
             )
             with(cursor) {
+                val id = getInt(getColumnIndexOrThrow(UserContract.UserEntry.COLUMN_ID))
                 val name = getString(getColumnIndexOrThrow(UserContract.UserEntry.COLUMN_NAME))
-                val age = getInt(getColumnIndexOrThrow(UserContract.UserEntry.COLUMN_AGE))
-                val email = getString(getColumnIndexOrThrow(UserContract.UserEntry.COLUMN_EMAIL))
+                val age = getInt(getColumnIndexOrThrow(UserContract.UserEntry.COLUMN_AGE)).toString()
+                val email = getString(getColumnIndexOrThrow(UserContract.UserEntry.COLUMN_EMAIL)).toInt()
                 val password = getString(getColumnIndexOrThrow(UserContract.UserEntry.COLUMN_PASSWORD))
+
+                users.add(User(id, name, age, email, password))
             }
             cursor.close()
-            return  users
+            return  users.joinToString("\n") { "${it.id} - ${it.name} - ${it.email} - ${it.age} - ${it.password}" }
         }
 
         fun updateUser(user: User): Int {
@@ -87,10 +93,7 @@ class UserDbHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_NAME, 
             return db.delete(UserContract.UserEntry.TABLE_NAME, selection, selectionArgs)
         }
 
-        // -----
-
-        fun getAllUsers(): List<User> {
-            val users = mutableListOf<User>()
+        fun printAllUsersToLog() {
             val db = readableDatabase
             val cursor = db.rawQuery("SELECT * FROM ${UserContract.UserEntry.TABLE_NAME}", null)
 
@@ -98,22 +101,18 @@ class UserDbHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_NAME, 
                 while (moveToNext()) {
                     val id = getInt(getColumnIndexOrThrow(UserContract.UserEntry.COLUMN_ID))
                     val name = getString(getColumnIndexOrThrow(UserContract.UserEntry.COLUMN_NAME))
-                    val age = getInt(getColumnIndexOrThrow(UserContract.UserEntry.COLUMN_AGE))
                     val email = getString(getColumnIndexOrThrow(UserContract.UserEntry.COLUMN_EMAIL))
+                    val age= getInt(getColumnIndexOrThrow(UserContract.UserEntry.COLUMN_AGE))
                     val password = getString(getColumnIndexOrThrow(UserContract.UserEntry.COLUMN_PASSWORD))
-                    
-                    users.add(id, name, age, email, password)
+
+                    Log.d("UserData", "ID: $id, Name: $name, Email: $email, Age: $age, Password: $password")
                 }
             }
-            
+
             cursor.close()
             db.close()
-            return users
         }
+
     }
-
-private fun <E> MutableList<E>.add(id: Int, name: String?, age: Int, email: String?, password: String?) {
-
-}
 
 //?
