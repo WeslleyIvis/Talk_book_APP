@@ -86,6 +86,34 @@ class UserDbHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_NAME, 
 
             return db.delete(UserContract.UserEntry.TABLE_NAME, selection, selectionArgs)
         }
+
+        // -----
+
+        fun getAllUsers(): List<User> {
+            val users = mutableListOf<User>()
+            val db = readableDatabase
+            val cursor = db.rawQuery("SELECT * FROM ${UserContract.UserEntry.TABLE_NAME}", null)
+
+            with(cursor) {
+                while (moveToNext()) {
+                    val id = getInt(getColumnIndexOrThrow(UserContract.UserEntry.COLUMN_ID))
+                    val name = getString(getColumnIndexOrThrow(UserContract.UserEntry.COLUMN_NAME))
+                    val age = getInt(getColumnIndexOrThrow(UserContract.UserEntry.COLUMN_AGE))
+                    val email = getString(getColumnIndexOrThrow(UserContract.UserEntry.COLUMN_EMAIL))
+                    val password = getString(getColumnIndexOrThrow(UserContract.UserEntry.COLUMN_PASSWORD))
+                    
+                    users.add(id, name, age, email, password)
+                }
+            }
+            
+            cursor.close()
+            db.close()
+            return users
+        }
     }
+
+private fun <E> MutableList<E>.add(id: Int, name: String?, age: Int, email: String?, password: String?) {
+
+}
 
 //?
