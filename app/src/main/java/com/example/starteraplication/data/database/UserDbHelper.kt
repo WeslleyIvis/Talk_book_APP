@@ -93,6 +93,27 @@ class UserDbHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_NAME, 
             return db.delete(UserContract.UserEntry.TABLE_NAME, selection, selectionArgs)
         }
 
+        // Valida se o usuario existe para fazer login
+        fun validateUser(email: String, password: String): Boolean {
+            val db = readableDatabase
+            val selection = "${UserContract.UserEntry.COLUMN_EMAIL} = ? AND ${UserContract.UserEntry.COLUMN_PASSWORD} = ?"
+            val selectionArgs = arrayOf(email, password)
+
+            val cursor = db.query(
+                UserContract.UserEntry.TABLE_NAME,
+                null,
+                selection,
+                selectionArgs,
+                null,
+                null, null
+            )
+
+            val isValid = cursor.moveToFirst()
+            cursor.close()
+            db.close()
+            return isValid
+        }
+
         fun printAllUsersToLog() {
             val db = readableDatabase
             val cursor = db.rawQuery("SELECT * FROM ${UserContract.UserEntry.TABLE_NAME}", null)

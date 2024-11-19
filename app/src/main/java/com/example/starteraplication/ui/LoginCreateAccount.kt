@@ -1,6 +1,7 @@
 package com.example.starteraplication.ui
 
 import android.content.Intent
+import android.icu.lang.UCharacter.GraphemeClusterBreak.T
 import android.os.Bundle
 import android.util.Log
 import android.widget.Button
@@ -27,7 +28,6 @@ class LoginCreateAccount : AppCompatActivity() {
             startActivity(intent)
         }
 
-
         buttons.forEach { button ->
             button.setOnClickListener {
                 handlerWindow()
@@ -42,9 +42,9 @@ class LoginCreateAccount : AppCompatActivity() {
             val passwordMath = password.contentEquals(confirmPassword)
 
             if(name.isEmpty() || email.isEmpty() || password.isEmpty() || confirmPassword.isEmpty() || password.isEmpty()) {
-                println("preencha todos os campos")
+                Toast.makeText(this@LoginCreateAccount, "Preencha todos os campos", Toast.LENGTH_SHORT).show()
             } else if (!passwordMath) {
-                println("As senhas não são iguais")
+                Toast.makeText(this@LoginCreateAccount, "As senhas não são iguais", Toast.LENGTH_SHORT).show()
             } else {
                 val dbHelper = UserDbHelper(this)
                 val newUser = User(id = null,name, email, age = 0, password)
