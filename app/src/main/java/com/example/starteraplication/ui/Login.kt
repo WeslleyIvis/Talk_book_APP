@@ -12,7 +12,7 @@ class Login : AppCompatActivity() {
         setContentView(R.layout.login_window)
 
         findViewById<TextView>(R.id.button).setOnClickListener {
-            val intent = Intent(this, BookDetailsActivity::class.java)
+            val intent = Intent(this, HomeActivity::class.java)
             startActivity(intent)
             finish()
         }
