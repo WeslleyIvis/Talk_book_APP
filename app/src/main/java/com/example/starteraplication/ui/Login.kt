@@ -23,6 +23,11 @@ class Login : AppCompatActivity() {
             startActivity(intent)
         }
 
+        fun handlerContext() {
+            val intent = Intent(this, MainStartApp::class.java)
+            startActivity(intent)
+        }
+
         findViewById<Button>(R.id.button_login).setOnClickListener{
             val email = findViewById<TextView>(R.id.login_input_email).text.toString()
             val password = findViewById<TextView>(R.id.login_input_password).text.toString()
@@ -35,7 +40,7 @@ class Login : AppCompatActivity() {
                     }
 
                     if (isValid) {
-                        Toast.makeText(this@Login, "Usuario OK", Toast.LENGTH_SHORT).show()
+                        handlerContext()
                     } else {
                         Toast.makeText(this@Login, "Login ou senha incorretos", Toast.LENGTH_SHORT).show()
                     }
