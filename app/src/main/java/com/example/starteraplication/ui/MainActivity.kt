@@ -7,9 +7,13 @@ import android.widget.EditText
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
+import androidx.fragment.app.Fragment
 import com.example.starteraplication.R
+import com.example.starteraplication.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
+
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -20,9 +24,12 @@ class MainActivity : AppCompatActivity() {
 
         val btnLogin = findViewById<Button>(R.id.btn_login)
 
+
         btnLogin.setOnClickListener {
             val intent = Intent(this, Login::class.java)
             startActivity(intent)
         }
+
     }
+
 }
