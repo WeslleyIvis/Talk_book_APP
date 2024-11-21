@@ -11,6 +11,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
 import com.example.starteraplication.R
 import com.example.starteraplication.data.database.UserDbHelper
+import com.example.starteraplication.data.repository.UserRepository
 import com.example.starteraplication.model.User
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -46,8 +47,8 @@ class LoginCreateAccount : AppCompatActivity() {
             } else if (!passwordMath) {
                 Toast.makeText(this@LoginCreateAccount, "As senhas não são iguais", Toast.LENGTH_SHORT).show()
             } else {
-                val dbHelper = UserDbHelper(this)
-                val newUser = User(id = null,name, email, age = 0, password)
+                val dbHelper = UserRepository(this)
+                val newUser = User(id = null,name, email, age = 0, photoUrl = "https://static.vecteezy.com/system/resources/previews/009/292/244/non_2x/default-avatar-icon-of-social-media-user-vector.jpg", password)
 
                 lifecycleScope.launch {
                     try {
