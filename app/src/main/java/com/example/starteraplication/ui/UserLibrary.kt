@@ -4,15 +4,13 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat.startActivity
 import com.example.starteraplication.R
 
-class Login : AppCompatActivity() {
+class UserLibrary : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.login_window)
-        findViewById<TextView>(R.id.btn_text_create_account).setOnClickListener {
-            val intent = Intent(this, LoginCreateAccount::class.java)
-            startActivity(intent)
-        }
+        setContentView(R.layout.user_library)
+
     }
 }

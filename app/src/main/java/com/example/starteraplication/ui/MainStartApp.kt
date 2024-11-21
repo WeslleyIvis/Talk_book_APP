@@ -1,5 +1,6 @@
 package com.example.starteraplication.ui
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.example.starteraplication.R
@@ -9,5 +10,6 @@ class MainStartApp : AppCompatActivity() {
         super.onCreate(savedInstanceState)
 
         setContentView(R.layout.main_start_app)
+
     }
 }
