@@ -3,27 +3,29 @@ package com.example.starteraplication.ui
 import android.content.Intent
 import android.os.Build
 import android.os.Bundle
-import android.view.View
-import android.view.WindowInsets
+import android.widget.Button
 import android.widget.TextView
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
 import com.example.starteraplication.R
 
-class Login : AppCompatActivity() {
+class passwordRecovery : AppCompatActivity() {
     @RequiresApi(Build.VERSION_CODES.R)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.login_window)
+        setContentView(R.layout.password_recovery)
 
-        findViewById<TextView>(R.id.btn_text_create_account).setOnClickListener {
-            val intent = Intent(this, LoginCreateAccount::class.java)
+        val buttons = listOf(findViewById<Button>(R.id.create_acc_button_to_go_back), findViewById<TextView>(R.id.create_acc_text_login))
+
+        fun handlerWindow() {
+            val intent = Intent(this, Login::class.java)
             startActivity(intent)
         }
 
-        findViewById<TextView>(R.id.btn_text_create_account2).setOnClickListener {
-            val intent = Intent(this, passwordRecovery::class.java)
-            startActivity(intent)
+        buttons.forEach { button ->
+            button.setOnClickListener {
+                handlerWindow()
+            }
         }
     }
 }
