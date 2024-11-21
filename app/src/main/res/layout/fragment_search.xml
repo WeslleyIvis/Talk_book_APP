@@ -1,19 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:background="@color/white"
     tools:context=".ui.Search"
     >
 
-    <!-- TODO: Update blank fragment layout -->
     <TextView
+        android:id="@+id/textView10"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/search_fragment"
-        android:textSize="26dp"
-        android:layout_gravity="center"
-        />
+        android:fontFamily="@font/montserrat_extrabold"
+        android:text="Pesquisar"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="16dp" />
 
-</FrameLayout>
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="44dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="388dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/foto_usuario"
+        tools:ignore="MissingConstraints" />
+
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/searchView"
+        android:layout_width="405dp"
+        android:layout_height="38dp"
+        app:iconifiedByDefault="false"
+        app:queryHint="Pesquisar..."
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="5dp"
+        tools:layout_editor_absoluteY="69dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

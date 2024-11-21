@@ -29,5 +29,11 @@
             sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. </string>
     <string name="_00_32_03">00:32:03</string>
     <string name="click_me">Click me</string>
+
+
+    <!--  Tela de biblioteca  -->
+    <string name="description_library">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</string>
 </resources>
+
+
 

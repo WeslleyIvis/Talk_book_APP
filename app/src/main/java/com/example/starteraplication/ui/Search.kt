@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.appcompat.widget.SearchView
 import com.example.starteraplication.R
 
 // TODO: Rename parameter arguments, choose names that match
@@ -56,5 +57,35 @@ class Search : Fragment() {
                     putString(ARG_PARAM2, param2)
                 }
             }
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        val searchView = view.findViewById<SearchView>(R.id.searchView)
+
+        searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
+            override fun onQueryTextSubmit(query: String?): Boolean {
+                // Ação a ser executada quando o usuário enviar a consulta (pressionar Enter)
+                // Por exemplo, realizar a pesquisa:
+                realizarPesquisa(query)
+                return true
+            }
+
+            override fun onQueryTextChange(newText: String?): Boolean {
+                // Ação a ser executada quando o texto da consulta mudar
+                // Por exemplo, atualizar as sugestões de pesquisa:
+                atualizarSugestoes(newText)
+                return true
+            }
+        })
+    }
+
+    private fun realizarPesquisa(query: String?) {
+        // Implemente a lógica de pesquisa aqui
+    }
+
+    private fun atualizarSugestoes(newText: String?) {
+        // Implemente a lógica de atualização de sugestões aqui
     }
 }
