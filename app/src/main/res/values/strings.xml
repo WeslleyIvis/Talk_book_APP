@@ -1,5 +1,16 @@
 <resources>
     <string name="app_name">StarterAplication</string>
+    <string name="author_name">Nome do Autor</string>
+    <string name="author_age">Idade:</string>
+    <string name="age_num">23</string>
+    <string name="books_author_quantity">Livros:</string>
+    <string name="books_author_quantity_num">50</string>
+    <string name="nacionalidade_autor">Brasileiro</string>
+    <string name="description_author">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</string>
+    <string name="all_books_author">Livros do autor</string>
+    <string name="trending_topics_books">Livros mais lidos</string>
+
+
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="home_fragment">Home Fragment</string>
