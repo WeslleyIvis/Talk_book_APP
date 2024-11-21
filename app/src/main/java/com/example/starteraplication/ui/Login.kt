@@ -14,5 +14,10 @@ class Login : AppCompatActivity() {
             val intent = Intent(this, LoginCreateAccount::class.java)
             startActivity(intent)
         }
+
+        findViewById<TextView>(R.id.btn_text_create_account2).setOnClickListener {
+            val intent = Intent(this, passwordRecovery::class.java)
+            startActivity(intent)
+        }
     }
 }
