@@ -18,5 +18,11 @@
             sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. </string>
     <string name="_00_32_03">00:32:03</string>
     <string name="click_me">Click me</string>
+    <string name="teste">teste</string>
+    <string name="livros_do_autor">Livros do Autor</string>
+    <string name="recomendados_para_voc">Recomendados para você</string>
+    <string name="notification_icon">Notification Icon</string>
+    <string name="profile_icon">Profile Icon</string>
+    <string name="image_logo">Image_logo</string>
 </resources>
 

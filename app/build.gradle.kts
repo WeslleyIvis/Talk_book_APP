@@ -42,8 +42,10 @@ android {
 }
 
 dependencies {
+    implementation(libs.androidx.viewpager2.v100)
+    implementation(libs.material.v190)
     implementation(libs.androidx.viewpager2)
-    implementation("androidx.fragment:fragment-ktx:1.8.5")
+    implementation(libs.androidx.fragment.ktx)
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
@@ -52,4 +54,5 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+
 }
