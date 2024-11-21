@@ -15,6 +15,7 @@ class HomeActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home_screen)
+
         // Navigation bar
         binding = ActivityHomeScreenBinding.inflate(layoutInflater)
         setContentView(binding.root)
@@ -30,7 +31,6 @@ class HomeActivity : AppCompatActivity() {
             }
             true
         }
-
     }
 
     private fun replaceFragment(fragment: Fragment){
