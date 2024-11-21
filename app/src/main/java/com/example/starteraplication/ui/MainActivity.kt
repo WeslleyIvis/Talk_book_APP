@@ -9,7 +9,6 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.example.starteraplication.R
-import com.example.starteraplication.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
 

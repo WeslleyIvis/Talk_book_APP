@@ -1,6 +1,6 @@
 package com.example.starteraplication.ui
 
-import android.annotation.SuppressLint
+
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
@@ -8,10 +8,10 @@ import com.example.starteraplication.R
 import com.example.starteraplication.databinding.ActivityHomeScreenBinding
 
 
-@SuppressLint("StaticFieldLeak")
-private lateinit var binding: ActivityHomeScreenBinding
 
 class HomeActivity : AppCompatActivity() {
+    private lateinit var binding: ActivityHomeScreenBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home_screen)
@@ -26,7 +26,6 @@ class HomeActivity : AppCompatActivity() {
                 R.id.search -> replaceFragment(Search())
                 R.id.library -> replaceFragment(MyLibrary())
                 else ->{
-
                 }
             }
             true
