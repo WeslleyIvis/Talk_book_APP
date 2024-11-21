@@ -8,7 +8,7 @@
     android:layout_height="match_parent">
 
     <FrameLayout
-        android:id="@+id/frameLayout"
+        android:id="@+id/frame_layout"
         android:layout_width="0dp"
         android:layout_height="0dp"
         app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
@@ -65,22 +65,22 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textAuthor" />
 
-            <TextView
-                android:id="@+id/id_age"
-                android:layout_width="14dp"
-                android:layout_height="15dp"
-                android:layout_marginEnd="180dp"
-                android:layout_marginBottom="11dp"
-                android:text="@string/age_num"
-                android:textAlignment="center"
-                android:textSize="12sp"
-                android:textStyle="bold"
-                app:layout_constraintBottom_toTopOf="@+id/livros_text"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.263"
-                app:layout_constraintStart_toEndOf="@+id/id_books" />
+             <TextView
+                 android:id="@+id/id_age"
+                 android:layout_width="14dp"
+                 android:layout_height="15dp"
+                 android:layout_marginEnd="180dp"
+                 android:layout_marginBottom="12dp"
+                 android:text="@string/age_num"
+                 android:textAlignment="center"
+                 android:textSize="12sp"
+                 android:textStyle="bold"
+                 app:layout_constraintBottom_toTopOf="@+id/livros_text"
+                 app:layout_constraintEnd_toEndOf="parent"
+                 app:layout_constraintHorizontal_bias="0.236"
+                 app:layout_constraintStart_toEndOf="@+id/id_books" />
 
-            <TextView
+             <TextView
                 android:id="@+id/id_books"
                 android:layout_width="38dp"
                 android:layout_height="16dp"
@@ -94,21 +94,21 @@
                 app:layout_constraintTop_toBottomOf="@+id/textView13"
                 app:layout_constraintVertical_bias="0.0" />
 
-            <TextView
-                android:id="@+id/livros_text"
-                android:layout_width="14dp"
-                android:layout_height="15dp"
-                android:layout_marginEnd="181dp"
-                android:layout_marginBottom="51dp"
-                android:text="@string/books_author_quantity_num"
-                android:textSize="12sp"
-                android:textStyle="bold"
-                app:layout_constraintBottom_toTopOf="@+id/description_author"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.243"
-                app:layout_constraintStart_toEndOf="@+id/id_books" />
+             <TextView
+                 android:id="@+id/livros_text"
+                 android:layout_width="14dp"
+                 android:layout_height="15dp"
+                 android:layout_marginEnd="181dp"
+                 android:layout_marginBottom="54dp"
+                 android:text="@string/books_author_quantity_num"
+                 android:textSize="12sp"
+                 android:textStyle="bold"
+                 app:layout_constraintBottom_toTopOf="@+id/description_author"
+                 app:layout_constraintEnd_toEndOf="parent"
+                 app:layout_constraintHorizontal_bias="0.243"
+                 app:layout_constraintStart_toEndOf="@+id/id_books" />
 
-            <TextView
+             <TextView
                 android:id="@+id/nacionalidade_autor"
                 android:layout_width="56dp"
                 android:layout_height="15dp"
@@ -119,32 +119,33 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/id_books" />
 
-            <TextView
-                android:id="@+id/description_author"
-                android:layout_width="380dp"
-                android:layout_height="153dp"
-                android:layout_marginTop="24dp"
-                android:layout_marginEnd="16dp"
-                android:fontFamily="@font/montserrat"
-                android:text="@string/description_author"
-                android:textSize="14sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/img_author" />
+             <!--container para o scrollview horizontal-->
 
-            <!--container para o scrollview horizontal-->
-            <TextView
-                android:id="@+id/all_books_author"
-                android:layout_width="110dp"
-                android:layout_height="17dp"
-                android:layout_marginTop="16dp"
-                android:layout_marginEnd="288dp"
-                android:fontFamily="@font/montserrat"
-                android:text="@string/all_books_author"
-                android:textStyle="bold"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/description_author" />
+             <TextView
+                 android:id="@+id/description_author"
+                 android:layout_width="380dp"
+                 android:layout_height="153dp"
+                 android:layout_marginTop="28dp"
+                 android:layout_marginEnd="32dp"
+                 android:fontFamily="@font/montserrat"
+                 android:text="@string/description_author"
+                 android:textSize="14sp"
+                 app:layout_constraintEnd_toEndOf="parent"
+                 app:layout_constraintTop_toBottomOf="@+id/img_author" />
 
-            <HorizontalScrollView
+             <TextView
+                 android:id="@+id/all_books_author"
+                 android:layout_width="110dp"
+                 android:layout_height="17dp"
+                 android:layout_marginTop="20dp"
+                 android:layout_marginEnd="320dp"
+                 android:fontFamily="@font/montserrat"
+                 android:text="@string/all_books_author"
+                 android:textStyle="bold"
+                 app:layout_constraintEnd_toEndOf="parent"
+                 app:layout_constraintTop_toBottomOf="@+id/description_author" />
+
+             <HorizontalScrollView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
@@ -208,19 +209,19 @@
             </HorizontalScrollView>
 
 
-            <TextView
-                android:id="@+id/Livros_mais_lidos"
-                android:layout_width="119dp"
-                android:layout_height="17dp"
-                android:layout_marginEnd="276dp"
-                android:layout_marginBottom="176dp"
-                android:fontFamily="@font/montserrat"
-                android:text="@string/trending_topics_books"
-                android:textStyle="bold"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent" />
+             <TextView
+                 android:id="@+id/Livros_mais_lidos"
+                 android:layout_width="119dp"
+                 android:layout_height="17dp"
+                 android:layout_marginEnd="312dp"
+                 android:layout_marginBottom="420dp"
+                 android:fontFamily="@font/montserrat"
+                 android:text="@string/trending_topics_books"
+                 android:textStyle="bold"
+                 app:layout_constraintBottom_toBottomOf="parent"
+                 app:layout_constraintEnd_toEndOf="parent" />
 
-            <HorizontalScrollView
+             <HorizontalScrollView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
@@ -281,11 +282,8 @@
 
             </HorizontalScrollView>
 
-
          </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
-
-
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottomNavigationView"
@@ -293,7 +291,8 @@
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/bottom_nav">
 
     </com.google.android.material.bottomnavigation.BottomNavigationView>
 
