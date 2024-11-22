@@ -14,7 +14,7 @@ class BookDetails : AppCompatActivity(){
 
         val textnavigate = findViewById<TextView>(R.id.author_name_button)
         textnavigate.setOnClickListener {
-            val intent = Intent(this, authorScreen::class.java)
+            val intent = Intent(this, AuthorScreen::class.java)
             startActivity(intent)
         }
 
