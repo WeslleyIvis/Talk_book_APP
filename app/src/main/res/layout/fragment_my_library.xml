@@ -1,11 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:layout_editor_absoluteX="12dp"
+    tools:layout_editor_absoluteY="422dp">
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
     android:background="@color/white"
     tools:context=".ui.MyLibrary"
+    android:orientation="vertical"
     >
 
     <ImageView
@@ -64,42 +73,45 @@
         tools:ignore="MissingConstraints" />
 
     <ImageView
-        android:id="@+id/imageView13"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="20dp"
-        android:src="@drawable/vertical_bar_cross"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@id/imageView6"
-        tools:ignore="MissingConstraints" />
-
-    <ImageView
         android:id="@+id/imageView12"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="4dp"
+        android:layout_marginTop="32dp"
         android:src="@drawable/bar_cross"
-        app:layout_constraintEnd_toStartOf="@id/imageView13"
-        app:layout_constraintTop_toTopOf="@id/imageView6"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.953"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.008"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/imageView13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:src="@drawable/vertical_bar_cross"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.937"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.001"
         tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/textView9"
         android:layout_width="50dp"
         android:layout_height="13dp"
-        android:text=" Recentes"
-        android:textSize="10sp"
-        android:textColor="#5F5F5F"
-        tools:layout_editor_absoluteX="30dp"
-        tools:layout_editor_absoluteY="80dp"
-        tools:ignore="MissingConstraints"
-        app:layout_constraintTop_toBottomOf="@id/imageView8"
-        app:layout_constraintStart_toEndOf="@id/imageView14"
-        android:layout_marginTop="8dp"
         android:layout_marginStart="4dp"
-        />
+        android:layout_marginTop="8dp"
+        android:text="Recentes"
+        android:textColor="#5F5F5F"
+        android:textSize="12sp"
+        app:layout_constraintStart_toEndOf="@id/imageView14"
+        app:layout_constraintTop_toBottomOf="@id/imageView8"
+        tools:ignore="MissingConstraints" />
 
     <ImageView
         android:id="@+id/imageView14"
@@ -121,7 +133,7 @@
         android:layout_height="13dp"
         android:text="Genêros"
         android:textColor="#5F5F5F"
-        android:textSize="10sp"
+        android:textSize="12sp"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="88dp"
         tools:layout_editor_absoluteY="80dp"
@@ -140,4 +152,501 @@
         app:layout_constraintTop_toTopOf="@id/textView9"
         tools:ignore="MissingConstraints" />
 
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        >
+    </FrameLayout>
+
+    <!-- Containers livros -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/my_container"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:padding="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView12">
+
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/image_book_library"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="Nome do Livro"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/image"
+            app:layout_constraintTop_toTopOf="@+id/image" />
+
+        <TextView
+            android:id="@+id/description"
+            android:layout_width="272dp"
+            android:layout_height="71dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginBottom="32dp"
+            android:text="@string/description_library"
+            android:textSize="12sp"
+            android:textStyle="normal"
+            app:layout_constraintBottom_toTopOf="@+id/name_author"
+            app:layout_constraintStart_toEndOf="@+id/image"
+            app:layout_constraintTop_toTopOf="@+id/image"
+            app:layout_constraintVertical_bias="0.03" />
+
+        <TextView
+            android:id="@+id/name_author"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="110dp"
+            android:text="Autor:"
+            android:textSize="12sp"
+            android:textStyle="normal"
+            app:layout_constraintStart_toEndOf="@+id/image"
+            app:layout_constraintTop_toTopOf="@+id/image" />
+
+        <TextView
+            android:id="@+id/author"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="110dp"
+            android:text="Lorem Impsum"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/name_author"
+            app:layout_constraintTop_toTopOf="@+id/image" />
+
+        <TextView
+            android:id="@+id/name_gender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="130dp"
+            android:text="Gênero:"
+            android:textSize="12sp"
+            android:textStyle="normal"
+            app:layout_constraintStart_toEndOf="@+id/image"
+            app:layout_constraintTop_toTopOf="@+id/image" />
+
+        <TextView
+            android:id="@+id/gender"
+            android:layout_width="30dp"
+            android:layout_height="14dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="130dp"
+            android:text="Lorem"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/name_gender"
+            app:layout_constraintTop_toTopOf="@+id/image" />
+
+        <TextView
+            android:id="@+id/name_duration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="150dp"
+            android:text="Duração:"
+            android:textSize="12sp"
+            android:textStyle="normal"
+            app:layout_constraintStart_toEndOf="@+id/image"
+            app:layout_constraintTop_toTopOf="@+id/image" />
+
+        <TextView
+            android:id="@+id/duration"
+            android:layout_width="51dp"
+            android:layout_height="16dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="150dp"
+            android:text="05:32:00"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/name_gender"
+            app:layout_constraintTop_toTopOf="@+id/image" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/my_container2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="16dp"
+        android:padding="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/my_container">
+
+        <ImageView
+            android:id="@+id/image2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/image_book_library"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/title2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="Nome do Livro"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/image2"
+            app:layout_constraintTop_toTopOf="@+id/image2" />
+
+        <TextView
+            android:id="@+id/description2"
+            android:layout_width="273dp"
+            android:layout_height="77dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginBottom="32dp"
+            android:text="@string/description_library"
+            android:textSize="12sp"
+            android:textStyle="normal"
+            app:layout_constraintBottom_toTopOf="@+id/name_author2"
+            app:layout_constraintStart_toEndOf="@+id/image2"
+            app:layout_constraintTop_toTopOf="@+id/image2"
+            app:layout_constraintVertical_bias="0.03" />
+
+        <TextView
+            android:id="@+id/name_author2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="110dp"
+            android:text="Autor:"
+            android:textSize="12sp"
+            android:textStyle="normal"
+            app:layout_constraintStart_toEndOf="@+id/image2"
+            app:layout_constraintTop_toTopOf="@+id/image2" />
+
+        <TextView
+            android:id="@+id/author2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="110dp"
+            android:text="Lorem Impsum"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/name_author2"
+            app:layout_constraintTop_toTopOf="@+id/image2" />
+
+        <TextView
+            android:id="@+id/name_gender2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="130dp"
+            android:text="Gênero:"
+            android:textSize="12sp"
+            android:textStyle="normal"
+            app:layout_constraintStart_toEndOf="@+id/image2"
+            app:layout_constraintTop_toTopOf="@+id/image2" />
+
+        <TextView
+            android:id="@+id/gender2"
+            android:layout_width="30dp"
+            android:layout_height="14dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="130dp"
+            android:text="Lorem"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/name_gender2"
+            app:layout_constraintTop_toTopOf="@+id/image2" />
+
+        <TextView
+            android:id="@+id/name_duration2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="150dp"
+            android:text="Duração:"
+            android:textSize="12sp"
+            android:textStyle="normal"
+            app:layout_constraintStart_toEndOf="@+id/image2"
+            app:layout_constraintTop_toTopOf="@+id/image2" />
+
+        <TextView
+            android:id="@+id/duration2"
+            android:layout_width="50dp"
+            android:layout_height="16dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="150dp"
+            android:text="05:32:00"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/name_gender2"
+            app:layout_constraintTop_toTopOf="@+id/image2" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/my_container3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="16dp"
+        android:padding="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/my_container2">
+
+        <ImageView
+            android:id="@+id/image3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/image_book_library"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/title3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="Nome do Livro"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/image3"
+            app:layout_constraintTop_toTopOf="@+id/image3" />
+
+        <TextView
+            android:id="@+id/description3"
+            android:layout_width="273dp"
+            android:layout_height="73dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginBottom="32dp"
+            android:text="@string/description_library"
+            android:textSize="12sp"
+            android:textStyle="normal"
+            app:layout_constraintBottom_toTopOf="@+id/name_author3"
+            app:layout_constraintStart_toEndOf="@+id/image3"
+            app:layout_constraintTop_toTopOf="@+id/image3"
+            app:layout_constraintVertical_bias="0.03" />
+
+        <TextView
+            android:id="@+id/name_author3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="110dp"
+            android:text="Autor:"
+            android:textSize="12sp"
+            android:textStyle="normal"
+            app:layout_constraintStart_toEndOf="@+id/image3"
+            app:layout_constraintTop_toTopOf="@+id/image3" />
+
+        <TextView
+            android:id="@+id/author3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="110dp"
+            android:text="Lorem Impsum"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/name_author3"
+            app:layout_constraintTop_toTopOf="@+id/image3" />
+
+        <TextView
+            android:id="@+id/name_gender3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="130dp"
+            android:text="Gênero:"
+            android:textSize="12sp"
+            android:textStyle="normal"
+            app:layout_constraintStart_toEndOf="@+id/image3"
+            app:layout_constraintTop_toTopOf="@+id/image3" />
+
+        <TextView
+            android:id="@+id/gender3"
+            android:layout_width="30dp"
+            android:layout_height="14dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="130dp"
+            android:text="Lorem"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/name_gender3"
+            app:layout_constraintTop_toTopOf="@+id/image3" />
+
+        <TextView
+            android:id="@+id/name_duration3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="150dp"
+            android:text="Duração:"
+            android:textSize="12sp"
+            android:textStyle="normal"
+            app:layout_constraintStart_toEndOf="@+id/image3"
+            app:layout_constraintTop_toTopOf="@+id/image3" />
+
+        <TextView
+            android:id="@+id/duration3"
+            android:layout_width="52dp"
+            android:layout_height="16dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="150dp"
+            android:text="05:32:00"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/name_gender3"
+            app:layout_constraintTop_toTopOf="@+id/image3" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/my_container4"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="16dp"
+        android:padding="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/my_container3">
+
+        <ImageView
+            android:id="@+id/image4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/image_book_library"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/title4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="Nome do Livro"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/image4"
+            app:layout_constraintTop_toTopOf="@+id/image4" />
+
+        <TextView
+            android:id="@+id/description4"
+            android:layout_width="265dp"
+            android:layout_height="75dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginBottom="32dp"
+            android:text="@string/description_library"
+            android:textSize="12sp"
+            android:textStyle="normal"
+            app:layout_constraintBottom_toTopOf="@+id/name_author4"
+            app:layout_constraintStart_toEndOf="@+id/image4"
+            app:layout_constraintTop_toTopOf="@+id/image4"
+            app:layout_constraintVertical_bias="0.03" />
+
+        <TextView
+            android:id="@+id/name_author4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="110dp"
+            android:text="Autor:"
+            android:textSize="12sp"
+            android:textStyle="normal"
+            app:layout_constraintStart_toEndOf="@+id/image4"
+            app:layout_constraintTop_toTopOf="@+id/image4" />
+
+        <TextView
+            android:id="@+id/author4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="110dp"
+            android:text="Lorem Impsum"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/name_author4"
+            app:layout_constraintTop_toTopOf="@+id/image4" />
+
+        <TextView
+            android:id="@+id/name_gender4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="130dp"
+            android:text="Gênero:"
+            android:textSize="12sp"
+            android:textStyle="normal"
+            app:layout_constraintStart_toEndOf="@+id/image4"
+            app:layout_constraintTop_toTopOf="@+id/image4" />
+
+        <TextView
+            android:id="@+id/gender4"
+            android:layout_width="30dp"
+            android:layout_height="14dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="130dp"
+            android:text="Lorem"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/name_gender4"
+            app:layout_constraintTop_toTopOf="@+id/image4" />
+
+        <TextView
+            android:id="@+id/name_duration4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="150dp"
+            android:text="Duração:"
+            android:textSize="12sp"
+            android:textStyle="normal"
+            app:layout_constraintStart_toEndOf="@+id/image4"
+            app:layout_constraintTop_toTopOf="@+id/image4" />
+
+        <TextView
+            android:id="@+id/duration4"
+            android:layout_width="53dp"
+            android:layout_height="16dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="150dp"
+            android:text="05:32:00"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/name_gender4"
+            app:layout_constraintTop_toTopOf="@+id/image4" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

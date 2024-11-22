@@ -1,10 +1,12 @@
 package com.example.starteraplication.ui
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
 import com.example.starteraplication.R
 
 // TODO: Rename parameter arguments, choose names that match
@@ -56,5 +58,24 @@ class MyLibrary : Fragment() {
                     putString(ARG_PARAM2, param2)
                 }
             }
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        val textViewIds = listOf(R.id.author, R.id.author2, R.id.author3, R.id.author4)
+
+        val onClickListener = View.OnClickListener { clickedView ->
+            when (clickedView.id) {
+                R.id.author, R.id.author2, R.id.author3, R.id.author4 -> {
+                    val intent = Intent(requireActivity(), AuthorScreen::class.java)
+                    startActivity(intent)
+                }
+            }
+        }
+
+        for (textViewId in textViewIds) {
+            view.findViewById<TextView>(textViewId).setOnClickListener(onClickListener)
+        }
     }
 }
