@@ -1,6 +1,7 @@
 package com.example.starteraplication.ui
 
 import android.content.Intent
+import android.widget.Button
 import android.os.Bundle
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
@@ -13,11 +14,15 @@ class BookDetails : AppCompatActivity(){
 
         val textnavigate = findViewById<TextView>(R.id.author_name_button)
         textnavigate.setOnClickListener {
-            // Criar uma intent para navegar para outra Activity
             val intent = Intent(this, authorScreen::class.java)
             startActivity(intent)
         }
 
+        val buttonNavigate = findViewById<Button>(R.id.button_ouvir)
 
+        buttonNavigate.setOnClickListener {
+            val intent = Intent(this, activity_play_sound::class.java)
+            startActivity(intent)
+        }
     }
 }
