@@ -33,7 +33,7 @@
         </activity>
             
         <activity
-            android:name=".ui.authorScreen"
+            android:name=".ui.AuthorScreen"
             android:exported="true">
         </activity>
 
