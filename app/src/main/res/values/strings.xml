@@ -11,6 +11,8 @@
     <string name="all_books_author">Livros do autor</string>
     <string name="trending_topics_books">Livros mais lidos</string>
 
+    
+
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="home_fragment">Home Fragment</string>
