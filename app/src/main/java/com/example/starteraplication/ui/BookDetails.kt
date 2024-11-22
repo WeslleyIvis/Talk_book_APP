@@ -19,9 +19,8 @@ class BookDetails : AppCompatActivity(){
         }
 
         val buttonNavigate = findViewById<Button>(R.id.button_ouvir)
-
         buttonNavigate.setOnClickListener {
-            val intent = Intent(this, activity_play_sound::class.java)
+            val intent = Intent(this, BookDetailsActivity::class.java)
             startActivity(intent)
         }
     }
