@@ -56,7 +56,7 @@
 
             <ViewFlipper
                 android:id="@+id/viewFlipper"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="250dp"
                 android:autoStart="true"
                 android:flipInterval="3000"
@@ -129,32 +129,39 @@
                     <ImageButton
                         android:id="@+id/imageButton5"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_height="150dp"
+                        android:adjustViewBounds="true"
+                        android:background="@null"
+                        android:layout_marginRight="16dp"
                         android:contentDescription="This button performs an action"
-                        app:srcCompat="@drawable/bg_livro_harrypotter" />
+                        app:srcCompat="@drawable/ic_ofestimdoscorvos" />
 
                     <ImageButton
                         android:id="@+id/imageButton6"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_height="150dp"
+                        android:adjustViewBounds="true"
+                        android:layout_marginRight="16dp"
                         android:contentDescription="This button performs an action"
-                        app:srcCompat="@drawable/bg_guerradostronos" />
+                        app:srcCompat="@drawable/ic_gameofthrones" />
 
                     <ImageButton
                         android:id="@+id/imageButton7"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_height="150dp"
+                        android:background="@null"
+                        android:layout_marginRight="16dp"
                         android:contentDescription="This button performs an action"
-                        app:srcCompat="@drawable/bg_dancadosdragoes" />
+                        app:srcCompat="@drawable/ic_tormentadaespada" />
 
                     <ImageButton
                         android:id="@+id/imageButton8"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_height="150dp"
+                        android:background="@null"
                         android:contentDescription="This button performs an action"
-                        app:srcCompat="@drawable/bg_festimdoscorvos" />
+                        app:srcCompat="@drawable/ic_furiadosreis" />
 
-                    <!-- Adicione mais botões conforme necessário -->
                 </LinearLayout>
             </HorizontalScrollView>
 
@@ -190,30 +197,104 @@
                     <ImageButton
                         android:id="@+id/imageButton1"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_height="150dp"
+                        android:adjustViewBounds="true"
+                        android:background="@null"
+                        android:layout_marginRight="16dp"
                         android:contentDescription="This button performs an action"
-                        app:srcCompat="@drawable/bg_tormentadeespadas" />
+                        app:srcCompat="@drawable/ic_ofestimdoscorvos" />
 
                     <ImageButton
                         android:id="@+id/imageButton2"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_height="150dp"
+                        android:adjustViewBounds="true"
+                        android:layout_marginRight="16dp"
                         android:contentDescription="This button performs an action"
-                        app:srcCompat="@drawable/bg_furiadosdeuses" />
+                        app:srcCompat="@drawable/ic_harrypotter_globef_fire" />
 
                     <ImageButton
                         android:id="@+id/imageButton3"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_height="150dp"
+                        android:background="@null"
+                        android:layout_marginRight="16dp"
                         android:contentDescription="This button performs an action"
-                        app:srcCompat="@drawable/bg_dancadosdragoes" />
+                        app:srcCompat="@drawable/ic_harrypotter_prisoner_of_azkaban" />
 
                     <ImageButton
                         android:id="@+id/imageButton4"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_height="150dp"
+                        android:background="@null"
                         android:contentDescription="This button performs an action"
-                        app:srcCompat="@drawable/bg_festimdoscorvos" />
+                        app:srcCompat="@drawable/ic_harrypotter_filosofy_rock" />
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <TextView
+                android:id="@+id/textAboveScrollView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/mang_s"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/horizontalScrollView2" />
+
+            <!-- HorizontalScrollView para Livros do Autor -->
+            <HorizontalScrollView
+                android:id="@+id/horizontalScrollView3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:scrollbars="none"
+                app:layout_constraintTop_toBottomOf="@id/textAboveScrollView3">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageButton
+                        android:id="@+id/imageButton10"
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:adjustViewBounds="true"
+                        android:background="@null"
+                        android:layout_marginRight="16dp"
+                        android:contentDescription="This button performs an action"
+                        app:srcCompat="@drawable/ic_berserk_um" />
+
+                    <ImageButton
+                        android:id="@+id/imageButton11"
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                         android:adjustViewBounds="true"
+                        android:layout_marginRight="16dp"
+                        android:contentDescription="This button performs an action"
+                        app:srcCompat="@drawable/ic_berserk_dois" />
+
+                    <ImageButton
+                        android:id="@+id/imageButton12"
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:background="@null"
+                        android:layout_marginRight="16dp"
+                        android:contentDescription="This button performs an action"
+                        app:srcCompat="@drawable/ic_berserk_tres" />
+
+                    <ImageButton
+                        android:id="@+id/imageButton13"
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:background="@null"
+                        android:contentDescription="This button performs an action"
+                        app:srcCompat="@drawable/ic_berserk_quatro" />
                 </LinearLayout>
             </HorizontalScrollView>
 
