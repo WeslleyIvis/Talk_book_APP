@@ -278,6 +278,17 @@
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
+    <Button
+        android:id="@+id/button_ouvir"
+        android:layout_width="160dp"
+        android:layout_height="55dp"
+        android:backgroundTint="#03A9F4"
+        android:fontFamily="@font/montserrat"
+        android:text="Veja mais"
+        android:textSize="20sp"
+        tools:layout_editor_absoluteX="144dp"
+        tools:layout_editor_absoluteY="755dp" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
 
 
