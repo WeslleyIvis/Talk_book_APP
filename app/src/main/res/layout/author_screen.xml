@@ -205,6 +205,8 @@
                         tools:layout_editor_absoluteX="383dp"
                         tools:layout_editor_absoluteY="422dp" />
 
+
+
                 </LinearLayout>
             </HorizontalScrollView>
 
@@ -246,7 +248,7 @@
                          android:layout_height="160dp"
                          android:layout_marginEnd="10dp"
                          android:contentDescription="sla"
-                         app:srcCompat="@drawable/ic_harrypotter"
+                         app:srcCompat="@drawable/ic_hp_calicedefogo"
                          tools:layout_editor_absoluteX="10dp"
                          tools:layout_editor_absoluteY="604dp" />
 
@@ -256,7 +258,7 @@
                          android:layout_height="160dp"
                          android:layout_marginEnd="10dp"
                          android:contentDescription="sla"
-                         app:srcCompat="@drawable/ic_ladobomdavida"
+                         app:srcCompat="@drawable/ic_hp_pedrafilosofal"
                          tools:layout_editor_absoluteX="124dp"
                          tools:layout_editor_absoluteY="599dp" />
 
@@ -266,7 +268,7 @@
                          android:layout_height="160dp"
                          android:layout_marginEnd="10dp"
                          android:contentDescription="sla"
-                         app:srcCompat="@drawable/ic_adancadosdragoess"
+                         app:srcCompat="@drawable/ic_hp_camarasecreta"
                          tools:layout_editor_absoluteX="232dp"
                          tools:layout_editor_absoluteY="583dp" />
 
@@ -276,7 +278,7 @@
                          android:layout_height="160dp"
                          android:layout_marginEnd="10dp"
                          android:contentDescription="sla"
-                         app:srcCompat="@drawable/ic_culpdadasestrelas"
+                         app:srcCompat="@drawable/ic_hp_prisioneirodeazkabam"
                          tools:layout_editor_absoluteX="295dp"
                          tools:layout_editor_absoluteY="567dp" />
                  </LinearLayout>
