@@ -17,5 +17,7 @@ class BookDetails : AppCompatActivity(){
             val intent = Intent(this, authorScreen::class.java)
             startActivity(intent)
         }
+
+
     }
 }
