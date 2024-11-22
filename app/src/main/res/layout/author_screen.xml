@@ -269,7 +269,7 @@
                          android:layout_height="160dp"
                          android:layout_marginEnd="10dp"
                          android:contentDescription="sla"
-                         app:srcCompat="@drawable/ic_berserk"
+                         app:srcCompat="@drawable/ic_hp_camarasecreta"
                          tools:layout_editor_absoluteX="232dp"
                          tools:layout_editor_absoluteY="583dp" />
 
