@@ -128,31 +128,33 @@
 
                     <ImageButton
                         android:id="@+id/imageButton5"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_width="100dp"
+                        android:layout_height="160dp"
+                        android:adjustViewBounds="true"
                         android:contentDescription="This button performs an action"
-                        app:srcCompat="@drawable/bg_livro_harrypotter" />
+                        app:srcCompat="@drawable/ic_ofestimdoscorvos" />
 
                     <ImageButton
                         android:id="@+id/imageButton6"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_width="100dp"
+                        android:layout_height="160dp"
+                        android:adjustViewBounds="true"
                         android:contentDescription="This button performs an action"
-                        app:srcCompat="@drawable/bg_guerradostronos" />
+                        app:srcCompat="@drawable/ic_gameofthrones" />
 
                     <ImageButton
                         android:id="@+id/imageButton7"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_width="100dp"
+                        android:layout_height="160dp"
                         android:contentDescription="This button performs an action"
-                        app:srcCompat="@drawable/bg_dancadosdragoes" />
+                        app:srcCompat="@drawable/ic_tormentadaespada" />
 
                     <ImageButton
                         android:id="@+id/imageButton8"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_width="100dp"
+                        android:layout_height="160dp"
                         android:contentDescription="This button performs an action"
-                        app:srcCompat="@drawable/bg_festimdoscorvos" />
+                        app:srcCompat="@drawable/ic_furiadosreis" />
 
                     <!-- Adicione mais botões conforme necessário -->
                 </LinearLayout>
