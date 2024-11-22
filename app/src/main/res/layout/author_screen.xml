@@ -15,23 +15,15 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
-    </FrameLayout>
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:fillViewport="true"
-        tools:layout_editor_absoluteX="12dp"
-        tools:layout_editor_absoluteY="422dp">
-
-         <androidx.constraintlayout.widget.ConstraintLayout
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:layout_constraintBottom_toBottomOf="parent"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent">
 
 
-             <ImageView
+            <ImageView
                 android:id="@+id/img_author"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
@@ -45,6 +37,7 @@
                 android:id="@+id/textAuthor"
                 android:layout_width="157dp"
                 android:layout_height="24dp"
+                android:layout_marginStart="25dp"
                 android:layout_marginTop="52dp"
                 android:layout_marginEnd="112dp"
                 android:fontFamily="@font/montserrat"
@@ -52,38 +45,45 @@
                 android:textSize="20sp"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/img_author"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
                 android:id="@+id/textView13"
                 android:layout_width="38dp"
                 android:layout_height="16dp"
+                android:layout_marginStart="25dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="232dp"
                 android:text="@string/author_age"
                 android:textSize="12sp"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/img_author"
                 app:layout_constraintTop_toBottomOf="@+id/textAuthor" />
 
-             <TextView
-                 android:id="@+id/id_age"
-                 android:layout_width="14dp"
-                 android:layout_height="15dp"
-                 android:layout_marginEnd="180dp"
-                 android:layout_marginBottom="12dp"
-                 android:text="@string/age_num"
-                 android:textAlignment="center"
-                 android:textSize="12sp"
-                 android:textStyle="bold"
-                 app:layout_constraintBottom_toTopOf="@+id/livros_text"
-                 app:layout_constraintEnd_toEndOf="parent"
-                 app:layout_constraintHorizontal_bias="0.236"
-                 app:layout_constraintStart_toEndOf="@+id/id_books" />
+            <TextView
+                android:id="@+id/id_age"
+                android:layout_width="22dp"
+                android:layout_height="18dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="180dp"
+                android:layout_marginBottom="12dp"
+                android:text="@string/age_num"
+                android:textAlignment="center"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/livros_text"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.24"
+                app:layout_constraintStart_toEndOf="@+id/id_books"
+                app:layout_constraintTop_toBottomOf="@+id/textAuthor"
+                app:layout_constraintVertical_bias="0.4" />
 
-             <TextView
+            <TextView
                 android:id="@+id/id_books"
                 android:layout_width="38dp"
                 android:layout_height="16dp"
+                android:layout_marginStart="25dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginEnd="232dp"
                 android:layout_marginBottom="612dp"
@@ -91,71 +91,80 @@
                 android:textSize="12sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/img_author"
                 app:layout_constraintTop_toBottomOf="@+id/textView13"
                 app:layout_constraintVertical_bias="0.0" />
 
-             <TextView
-                 android:id="@+id/livros_text"
-                 android:layout_width="14dp"
-                 android:layout_height="15dp"
-                 android:layout_marginEnd="181dp"
-                 android:layout_marginBottom="54dp"
-                 android:text="@string/books_author_quantity_num"
-                 android:textSize="12sp"
-                 android:textStyle="bold"
-                 app:layout_constraintBottom_toTopOf="@+id/description_author"
-                 app:layout_constraintEnd_toEndOf="parent"
-                 app:layout_constraintHorizontal_bias="0.243"
-                 app:layout_constraintStart_toEndOf="@+id/id_books" />
+            <TextView
+                android:id="@+id/livros_text"
+                android:layout_width="22dp"
+                android:layout_height="19dp"
+                android:layout_marginEnd="181dp"
+                android:layout_marginBottom="44dp"
+                android:text="@string/books_author_quantity_num"
+                android:textAlignment="center"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/description_author"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.25"
+                app:layout_constraintStart_toEndOf="@+id/id_books" />
 
-             <TextView
+            <!--container para o scrollview horizontal-->
+
+            <TextView
                 android:id="@+id/nacionalidade_autor"
-                android:layout_width="56dp"
-                android:layout_height="15dp"
+                android:layout_width="66dp"
+                android:layout_height="16dp"
+                android:layout_marginStart="25dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="215dp"
+                android:fontFamily="@font/montserrat"
                 android:text="@string/nacionalidade_autor"
-                android:textSize="12sp"
+                android:textSize="14sp"
+                android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.157"
+                app:layout_constraintStart_toEndOf="@+id/img_author"
                 app:layout_constraintTop_toBottomOf="@+id/id_books" />
 
-             <!--container para o scrollview horizontal-->
+            <TextView
+                android:id="@+id/description_author"
+                android:layout_width="0dp"
+                android:layout_height="153dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="15dp"
+                android:fontFamily="@font/montserrat"
+                android:text="@string/description_author"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/img_author" />
 
-             <TextView
-                 android:id="@+id/description_author"
-                 android:layout_width="380dp"
-                 android:layout_height="153dp"
-                 android:layout_marginTop="28dp"
-                 android:layout_marginEnd="32dp"
-                 android:fontFamily="@font/montserrat"
-                 android:text="@string/description_author"
-                 android:textSize="14sp"
-                 app:layout_constraintEnd_toEndOf="parent"
-                 app:layout_constraintTop_toBottomOf="@+id/img_author" />
+            <TextView
+                android:id="@+id/all_books_author"
+                android:layout_width="110dp"
+                android:layout_height="17dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/montserrat"
+                android:text="@string/all_books_author"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.04"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/description_author" />
 
-             <TextView
-                 android:id="@+id/all_books_author"
-                 android:layout_width="110dp"
-                 android:layout_height="17dp"
-                 android:layout_marginTop="20dp"
-                 android:layout_marginEnd="324dp"
-                 android:fontFamily="@font/montserrat"
-                 android:text="@string/all_books_author"
-                 android:textStyle="bold"
-                 app:layout_constraintEnd_toEndOf="parent"
-                 app:layout_constraintTop_toBottomOf="@+id/description_author" />
-
-             <HorizontalScrollView
+            <HorizontalScrollView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="380dp"
                 android:layout_marginEnd="15dp"
+                android:scrollbars="none"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                android:scrollbars="none"
-                >
+                app:layout_constraintTop_toTopOf="parent">
 
                 <!--container para os ImageButton-->
                 <LinearLayout
@@ -206,86 +215,95 @@
                         tools:layout_editor_absoluteY="422dp" />
 
 
-
                 </LinearLayout>
             </HorizontalScrollView>
 
 
-             <TextView
-                 android:id="@+id/Livros_mais_lidos"
-                 android:layout_width="119dp"
-                 android:layout_height="17dp"
-                 android:layout_marginEnd="312dp"
-                 android:layout_marginBottom="13dp"
-                 android:fontFamily="@font/montserrat"
-                 android:text="@string/trending_topics_books"
-                 android:textStyle="bold"
-                 app:layout_constraintBottom_toTopOf="@+id/horizontalScrollView"
-                 app:layout_constraintEnd_toEndOf="parent" />
+            <TextView
+                android:id="@+id/Livros_mais_lidos"
+                android:layout_width="119dp"
+                android:layout_height="17dp"
+                android:layout_marginBottom="13dp"
+                android:fontFamily="@font/montserrat"
+                android:text="@string/trending_topics_books"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/horizontalScrollView"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.04"
+                app:layout_constraintStart_toStartOf="parent" />
 
-             <HorizontalScrollView
-                 android:id="@+id/horizontalScrollView"
-                 android:layout_width="match_parent"
-                 android:layout_height="wrap_content"
-                 android:layout_marginStart="10dp"
-                 android:layout_marginTop="590dp"
-                 android:layout_marginEnd="10dp"
-                 android:scrollbars="none"
-                 app:layout_constraintEnd_toEndOf="parent"
-                 app:layout_constraintStart_toStartOf="parent"
-                 app:layout_constraintTop_toTopOf="parent">
+            <HorizontalScrollView
+                android:id="@+id/horizontalScrollView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="590dp"
+                android:layout_marginEnd="10dp"
+                android:scrollbars="none"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
 
-                 <LinearLayout
-                     android:layout_width="match_parent"
-                     android:layout_height="wrap_content"
-                     android:orientation="horizontal"
-                     app:layout_constraintStart_toStartOf="parent"
-                     app:layout_constraintTop_toTopOf="parent">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
 
-                     <ImageButton
-                         android:id="@+id/imageButton5"
-                         android:layout_width="100dp"
-                         android:layout_height="160dp"
-                         android:layout_marginEnd="10dp"
-                         android:contentDescription="sla"
-                         app:srcCompat="@drawable/ic_hp_calicedefogo"
-                         tools:layout_editor_absoluteX="10dp"
-                         tools:layout_editor_absoluteY="604dp" />
+                    <ImageButton
+                        android:id="@+id/livro1aba2"
+                        android:layout_width="100dp"
+                        android:layout_height="160dp"
+                        android:layout_marginEnd="10dp"
+                        android:contentDescription="sla"
+                        app:srcCompat="@drawable/ic_hp_calicedefogo"
+                        tools:layout_editor_absoluteX="10dp"
+                        tools:layout_editor_absoluteY="604dp" />
 
-                     <ImageButton
-                         android:id="@+id/imageButton6"
-                         android:layout_width="100dp"
-                         android:layout_height="160dp"
-                         android:layout_marginEnd="10dp"
-                         android:contentDescription="sla"
-                         app:srcCompat="@drawable/ic_hp_pedrafilosofal"
-                         tools:layout_editor_absoluteX="124dp"
-                         tools:layout_editor_absoluteY="599dp" />
+                    <ImageButton
+                        android:id="@+id/imageButton6"
+                        android:layout_width="100dp"
+                        android:layout_height="160dp"
+                        android:layout_marginEnd="10dp"
+                        android:contentDescription="sla"
+                        app:srcCompat="@drawable/ic_hp_pedrafilosofal"
+                        tools:layout_editor_absoluteX="124dp"
+                        tools:layout_editor_absoluteY="599dp" />
 
-                     <ImageButton
-                         android:id="@+id/imageButton7"
-                         android:layout_width="100dp"
-                         android:layout_height="160dp"
-                         android:layout_marginEnd="10dp"
-                         android:contentDescription="sla"
-                         app:srcCompat="@drawable/ic_hp_camarasecreta"
-                         tools:layout_editor_absoluteX="232dp"
-                         tools:layout_editor_absoluteY="583dp" />
+                    <ImageButton
+                        android:id="@+id/imageButton7"
+                        android:layout_width="100dp"
+                        android:layout_height="160dp"
+                        android:layout_marginEnd="10dp"
+                        android:contentDescription="sla"
+                        app:srcCompat="@drawable/ic_hp_camarasecreta"
+                        tools:layout_editor_absoluteX="232dp"
+                        tools:layout_editor_absoluteY="583dp" />
 
-                     <ImageButton
-                         android:id="@+id/imageView3"
-                         android:layout_width="100dp"
-                         android:layout_height="160dp"
-                         android:layout_marginEnd="10dp"
-                         android:contentDescription="sla"
-                         app:srcCompat="@drawable/ic_hp_prisioneirodeazkabam"
-                         tools:layout_editor_absoluteX="295dp"
-                         tools:layout_editor_absoluteY="567dp" />
-                 </LinearLayout>
+                    <ImageButton
+                        android:id="@+id/imageView3"
+                        android:layout_width="100dp"
+                        android:layout_height="160dp"
+                        android:layout_marginEnd="10dp"
+                        android:contentDescription="sla"
+                        app:srcCompat="@drawable/ic_hp_prisioneirodeazkabam"
+                        tools:layout_editor_absoluteX="295dp"
+                        tools:layout_editor_absoluteY="567dp" />
+                </LinearLayout>
 
-             </HorizontalScrollView>
+            </HorizontalScrollView>
 
-         </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </FrameLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        tools:layout_editor_absoluteX="12dp"
+        tools:layout_editor_absoluteY="422dp">
+
     </ScrollView>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView

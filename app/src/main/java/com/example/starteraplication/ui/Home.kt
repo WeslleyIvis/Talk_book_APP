@@ -1,10 +1,12 @@
 package com.example.starteraplication.ui
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import com.example.starteraplication.R
 
 // TODO: Rename parameter arguments, choose names that match
@@ -56,5 +58,14 @@ class Home : Fragment() {
                     putString(ARG_PARAM2, param2)
                 }
             }
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        view.findViewById<ImageView>(R.id.imageView4).setOnClickListener {
+            val intent = Intent(requireActivity(), BookDetails::class.java)
+            startActivity(intent)
+        }
     }
 }
