@@ -139,7 +139,7 @@
                  android:layout_width="110dp"
                  android:layout_height="17dp"
                  android:layout_marginTop="20dp"
-                 android:layout_marginEnd="320dp"
+                 android:layout_marginEnd="324dp"
                  android:fontFamily="@font/montserrat"
                  android:text="@string/all_books_author"
                  android:textStyle="bold"
@@ -173,7 +173,7 @@
                         android:layout_height="160dp"
                         android:layout_marginEnd="10dp"
                         android:contentDescription="sla"
-                        app:srcCompat="@drawable/ic_author_book_1"
+                        app:srcCompat="@drawable/ic_gameofthrones"
                         tools:layout_editor_absoluteX="12dp"
                         tools:layout_editor_absoluteY="422dp" />
 
@@ -183,7 +183,7 @@
                         android:layout_height="160dp"
                         android:layout_marginEnd="10dp"
                         android:contentDescription="sla"
-                        app:srcCompat="@drawable/ic_author_book_2"
+                        app:srcCompat="@drawable/ic_furiadosreis"
                         tools:layout_editor_absoluteX="136dp"
                         tools:layout_editor_absoluteY="422dp" />
 
@@ -193,7 +193,7 @@
                         android:layout_height="160dp"
                         android:layout_marginEnd="10dp"
                         android:contentDescription="sla"
-                        app:srcCompat="@drawable/ic_author_book_3"
+                        app:srcCompat="@drawable/ic_ofestimdoscorvos"
                         tools:layout_editor_absoluteX="260dp"
                         tools:layout_editor_absoluteY="422dp" />
 
@@ -202,7 +202,7 @@
                         android:layout_width="100dp"
                         android:layout_height="160dp"
                         android:contentDescription="sla"
-                        app:srcCompat="@drawable/ic_author_book_test"
+                        app:srcCompat="@drawable/ic_tormentadaespada"
                         tools:layout_editor_absoluteX="383dp"
                         tools:layout_editor_absoluteY="422dp" />
 
@@ -215,73 +215,74 @@
                  android:layout_width="119dp"
                  android:layout_height="17dp"
                  android:layout_marginEnd="312dp"
-                 android:layout_marginBottom="420dp"
+                 android:layout_marginBottom="13dp"
                  android:fontFamily="@font/montserrat"
                  android:text="@string/trending_topics_books"
                  android:textStyle="bold"
-                 app:layout_constraintBottom_toBottomOf="parent"
+                 app:layout_constraintBottom_toTopOf="@+id/horizontalScrollView"
                  app:layout_constraintEnd_toEndOf="parent" />
 
              <HorizontalScrollView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:layout_marginTop="590dp"
-                android:layout_marginEnd="10dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                android:scrollbars="none">
+                 android:id="@+id/horizontalScrollView"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:layout_marginStart="10dp"
+                 android:layout_marginTop="590dp"
+                 android:layout_marginEnd="10dp"
+                 android:scrollbars="none"
+                 app:layout_constraintEnd_toEndOf="parent"
+                 app:layout_constraintStart_toStartOf="parent"
+                 app:layout_constraintTop_toTopOf="parent">
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent">
+                 <LinearLayout
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:orientation="horizontal"
+                     app:layout_constraintStart_toStartOf="parent"
+                     app:layout_constraintTop_toTopOf="parent">
 
-                    <ImageButton
-                        android:id="@+id/imageButton5"
-                        android:contentDescription="sla"
-                        android:layout_width="100dp"
-                        android:layout_height="160dp"
-                        android:layout_marginEnd="10dp"
-                        app:srcCompat="@drawable/ic_author_book_trending1"
-                        tools:layout_editor_absoluteX="10dp"
-                        tools:layout_editor_absoluteY="604dp" />
+                     <ImageButton
+                         android:id="@+id/imageButton5"
+                         android:layout_width="100dp"
+                         android:layout_height="160dp"
+                         android:layout_marginEnd="10dp"
+                         android:contentDescription="sla"
+                         app:srcCompat="@drawable/ic_harrypotter"
+                         tools:layout_editor_absoluteX="10dp"
+                         tools:layout_editor_absoluteY="604dp" />
 
-                    <ImageButton
-                        android:id="@+id/imageButton6"
-                        android:contentDescription="sla"
-                        android:layout_width="100dp"
-                        android:layout_height="160dp"
-                        android:layout_marginEnd="10dp"
-                        app:srcCompat="@drawable/ic_author_book_trending2"
-                        tools:layout_editor_absoluteX="124dp"
-                        tools:layout_editor_absoluteY="599dp" />
+                     <ImageButton
+                         android:id="@+id/imageButton6"
+                         android:layout_width="100dp"
+                         android:layout_height="160dp"
+                         android:layout_marginEnd="10dp"
+                         android:contentDescription="sla"
+                         app:srcCompat="@drawable/ic_ladobomdavida"
+                         tools:layout_editor_absoluteX="124dp"
+                         tools:layout_editor_absoluteY="599dp" />
 
-                    <ImageButton
-                        android:id="@+id/imageButton7"
-                        android:contentDescription="sla"
-                        android:layout_width="100dp"
-                        android:layout_height="160dp"
-                        android:layout_marginEnd="10dp"
-                        app:srcCompat="@drawable/ic_author_book_3"
-                        tools:layout_editor_absoluteX="232dp"
-                        tools:layout_editor_absoluteY="583dp" />
+                     <ImageButton
+                         android:id="@+id/imageButton7"
+                         android:layout_width="100dp"
+                         android:layout_height="160dp"
+                         android:layout_marginEnd="10dp"
+                         android:contentDescription="sla"
+                         app:srcCompat="@drawable/ic_adancadosdragoess"
+                         tools:layout_editor_absoluteX="232dp"
+                         tools:layout_editor_absoluteY="583dp" />
 
-                    <ImageButton
-                        android:id="@+id/imageView3"
-                        android:contentDescription="sla"
-                        android:layout_width="100dp"
-                        android:layout_height="160dp"
-                        android:layout_marginEnd="10dp"
-                        app:srcCompat="@drawable/ic_author_book_trending4"
-                        tools:layout_editor_absoluteX="295dp"
-                        tools:layout_editor_absoluteY="567dp" />
-                </LinearLayout>
+                     <ImageButton
+                         android:id="@+id/imageView3"
+                         android:layout_width="100dp"
+                         android:layout_height="160dp"
+                         android:layout_marginEnd="10dp"
+                         android:contentDescription="sla"
+                         app:srcCompat="@drawable/ic_culpdadasestrelas"
+                         tools:layout_editor_absoluteX="295dp"
+                         tools:layout_editor_absoluteY="567dp" />
+                 </LinearLayout>
 
-            </HorizontalScrollView>
+             </HorizontalScrollView>
 
          </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
